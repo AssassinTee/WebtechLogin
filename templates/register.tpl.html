@@ -1,0 +1,73 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{$TITLE}</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="./scripts/register.js"></script>
+    </head>
+    <body>
+        
+        <div class="container">
+            <h1>{$SLOGAN}</h1>
+            {$INFO}
+            <form action="register_post.php" method="post" class="form-signing">
+                <div class="form-group">
+                    <input id="userbtn" type="text" class="form-control" name="name" placeholder="Username">
+                </div>
+                <div class="form-group">       
+                    <input id="passbtn" type="password" class="form-control" name="passwort" placeholder="Password">
+                </div>
+                <div class="form-group">       
+                    <!--<input id="gradebtn" type="note" class="form-control" name="note" placeholder="Grade">!-->
+                    <label for="gradebtn">Select a Grade:</label>
+                    <select id="gradebtn" class="form-control">
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                      <option value="6">6</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <button id="subbtn" type="submit" class="btn btn-primary">Submit<br></button>
+                </div>
+            </form>
+        </div>
+        <div class="container">
+            
+            <form action="login.php" method="post" class="form-signing">
+                <span class="btn-group">
+                <button type="submit" class="btn btn-primary">Go Back</button>
+                <button id="preview" type="button" class="btn btn-default">Preview<br></button>
+                </span>
+            </form>
+        </div>
+        
+        <div id="previewtable" class="container">
+            <h3>Preview</h3>
+            <table class="table" id="table">
+                <thead>
+                    <tr>
+                        <th>Username</th>
+                        <th>Password</th>
+                        <th>Grade</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td id="user">YourUsername</td>
+                        <td id="pass">YourPassword</td>
+                        <td id="grade">YourGrade</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+    </body>
+</html>
